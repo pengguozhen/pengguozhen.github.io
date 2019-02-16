@@ -12,11 +12,11 @@
 ## timezone: 网站时区 默认使用您电脑的时区。
 
 title: Ta的笑很甜 
-subtitle: Ta的笑很甜 
+subtitle: 你好 
 description: 
 keywords: 
 author: Ta 的笑很甜
-language: 
+language: zh-CN
 timezone: 
 
 # URL 网址相关配置
@@ -48,7 +48,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing 文章相关配置
 ## new_post_name: 新文章的文件名称。
@@ -111,7 +111,7 @@ pagination_dir: page
 # Extensions 插件&主题 配置
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: hexo-theme-next
 
 # Deployment 部署相关配置
 ## Docs: https://hexo.io/docs/deployment.html
@@ -120,3 +120,7 @@ deploy:
   type: git
   repo: git@github.com:pengguozhen/pengguozhen.github.io.git
   branch: master
+  
+# Extensions
+## Plugins: http://hexo.io/plugins/
+plugins: hexo-generate-feed
