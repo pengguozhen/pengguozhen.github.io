@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第1章-数据结构绪论]]></title>
+    <url>%2F2019%2F02%2F16%2F%E7%AC%AC1%E7%AB%A0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA%2F</url>
+    <content type="text"><![CDATA[该笔记摘抄于 《大话数据结构》工作中所需要的栈、队列、链表、散列表等结构；查找、排序等算法在开发语言的工具包中都有完美实现，为什么还要学习数据结构弄懂其算法实现的原理？ 1、数据结构起源 从计算机是用来进行数据计算的到现实中的问题需要一些科学有效的手段（表、树、图等数据结构）才能处理。 数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。注：这句话应该意思是，数据结构不是研究数值和数值计算的，而是研究对象（对象不止是数值，也可能是类对象或者其他），研究这些对象之间的关系（比如有什么共同点，比如顺序如何），以及操作（比如排序，插入等）。 程序设计的实质是对确定的问题选择一种好的结构、加上设计一种好的算法。即程序设计=数据结构+算法。 2、基本概念和术语123456789101112131415161718192021222324252627282930313233343536373839//数据结构基本概念#include&lt;iostream&gt;using namespace std;/*数据 – 程序的操作对象，用于描述客观事物数据的特点：可以输入到计算机可以被计算机程序处理数据是一个抽象的概念，将其进行分类后得到程序设计语言中的类型。如：int，float，char等等数据项：一个数据元素由若干数据项组成数据元素：组成数据对象的基本单位数据对象：性质相同的数据元素的集合（类似于数组一般）数据元素之间不是独立的，存在特定的关系，这些关系即结构数据结构指数据对象中数据元素之间的关系*///声明一个结构体类型struct Teacher //一种数据类型&#123; char name[32];//数据项 char tile[32];//数据项 int age;//数据项 char addr[128];//数据项&#125;;int main()&#123; struct Teacher t1; //数据元素 struct Teacher tArray[30]; //数据对象 memset(&amp;t1, 0, sizeof(t1)); strcpy(t1.name, "name"); //数据项 strcpy(t1.addr, "addr"); //数据项 strcpy(t1.tile, "addr"); //数据项 t1.age = 1;&#125; 3、逻辑结构与物理结构数据结构分为逻辑结构与物理结构 3-1、逻辑结构是指数据对象中数据元素之间的关系。分为四种。 - 集合结构 - 线性结构 - 树 - 图 3-2、物理结构（存储结构）数据的逻辑结构在计算机中的存储形式。实际上是指如何把数据元素存储到计算机存储器中的 数据元素的存储结构形式有两种： 顺序存储结构：如数组 链式存储结构：如链表，是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以不是连续的。 注：逻辑结构是面向问题的、物理结构是面向计算机的，基本的目标就是将数据及其逻辑关系存储到计算机的内存中。 4、抽象数据类型4-1、数据类型计算机需要对数据进行分类，就分出来很多数据的类型。比如 int，float 等。 4-2、抽象数据类型 1、为什么需要抽象数据类型？无论什么计算机、什么语言都会面临类似的整数运算，我们可以考虑将其抽象出来。抽象是抽取出事物具有的普遍性本质，是对事物的一个概括，是一种思考问题的方式。 2、定义抽象数据类型（ADT）是指一个数学模型及定义在该模型上的一组操作。它仅取决于其逻辑特征，而与计算机内部如何表示和实现无关。比如刚才说得整型，各个计算机，不管大型机、小型机、PC、平板电脑甚至智能手机，都有“整型”类型，也需要整形运算，那么整型其实就是一个抽象数据类型。 Java 中 接本数据类型、引用类型]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F02%2F14%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
