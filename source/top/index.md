@@ -6,7 +6,7 @@ description: 博客文章阅读量排行榜
 ---
 <div id="top"></div>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script>AV.initialize("app_id", "app_key");</script>
+<script>AV.initialize("Gj7jigLH3i0BVIoM8r2Kni4s-gzGzoHsz", "B6g16KgId51NWVhW3TElBj1O");</script>
 <script type="text/javascript">
   var time=0
   var title=""
