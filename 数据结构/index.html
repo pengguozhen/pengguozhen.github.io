@@ -82,7 +82,7 @@
     root: '/',
     scheme: 'Mist',
     version: '7.0.0',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -104,24 +104,14 @@
 
 
 
-  <meta name="description" content="该笔记摘抄于 《大话数据结构》工作中所需要的栈、队列、链表、散列表等结构；查找、排序等算法在开发语言的工具包中都有完美实现，为什么还要学习数据结构弄懂其算法实现的原理？ 1、数据结构起源 从计算机是用来进行数据计算的到现实中的问题需要一些科学有效的手段（表、树、图等数据结构）才能处理。  数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。注：这句话应">
-<meta name="keywords" content="数据结构">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第1章-数据结构绪论">
-<meta property="og:url" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="数据结构">
+<meta property="og:url" content="http://yoursite.com/数据结构/index.html">
 <meta property="og:site_name" content="Ta的笑很甜">
-<meta property="og:description" content="该笔记摘抄于 《大话数据结构》工作中所需要的栈、队列、链表、散列表等结构；查找、排序等算法在开发语言的工具包中都有完美实现，为什么还要学习数据结构弄懂其算法实现的原理？ 1、数据结构起源 从计算机是用来进行数据计算的到现实中的问题需要一些科学有效的手段（表、树、图等数据结构）才能处理。  数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。注：这句话应">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521700597047.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521871571036.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521871606947.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521871623031.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521871650962.jpg">
-<meta property="og:updated_time" content="2019-02-16T07:19:13.790Z">
+<meta property="og:updated_time" content="2019-02-13T08:08:19.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第1章-数据结构绪论">
-<meta name="twitter:description" content="该笔记摘抄于 《大话数据结构》工作中所需要的栈、队列、链表、散列表等结构；查找、排序等算法在开发语言的工具包中都有完美实现，为什么还要学习数据结构弄懂其算法实现的原理？ 1、数据结构起源 从计算机是用来进行数据计算的到现实中的问题需要一些科学有效的手段（表、树、图等数据结构）才能处理。  数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。注：这句话应">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/16/第1章-数据结构绪论/images/1521700597047.jpg">
+<meta name="twitter:title" content="数据结构">
 
 
 
@@ -130,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/16/第1章-数据结构绪论/">
+  <link rel="canonical" href="http://yoursite.com/数据结构/">
 
 
 
@@ -140,7 +130,7 @@
   };
 </script>
 
-  <title>第1章-数据结构绪论 | Ta的笑很甜</title>
+  <title>数据结构 | Ta的笑很甜</title>
   
 
 
@@ -322,6 +312,25 @@
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">2</span></a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-top">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/top/" rel="section"><i class="menu-item-icon fa fa-fw fa-signal"></i> <br>TopX</a>
+
+  </li>
 
       
       
@@ -338,6 +347,31 @@
 
   
     
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
 
   
 
@@ -386,229 +420,45 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/16/第1章-数据结构绪论/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ta 的笑很甜">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ta的笑很甜">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">第1章-数据结构绪论
+<h1 class="post-title" itemprop="name headline">数据结构
 
-              
-            
-          </h1>
-        
+</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
+<div class="post-meta">
+  
+  
 
-            
-            
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
 
-              
-                
-              
+</div>
 
-              <time title="创建时间：2019-02-16 15:12:42 / 修改时间：15:19:13" itemprop="dateCreated datePublished" datetime="2019-02-16T15:12:42+08:00">2019-02-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <p><strong>该笔记摘抄于 《大话数据结构》<br>工作中所需要的栈、队列、链表、散列表等结构；查找、排序等算法在开发语言的工具包中都有完美实现，为什么还要学习数据结构弄懂其算法实现的原理？</strong></p>
-<h3 id="1、数据结构起源"><a href="#1、数据结构起源" class="headerlink" title="1、数据结构起源"></a>1、数据结构起源</h3><ul>
-<li><p>从计算机是用来进行数据计算的到现实中的问题需要一些科学有效的手段（表、树、图等数据结构）才能处理。</p>
-</li>
-<li><p>数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及它们之间的关系和操作等相关问题的学科。<br>注：<code>这句话应该意思是，数据结构不是研究数值和数值计算的，而是研究对象（对象不止是数值，也可能是类对象或者其他），研究这些对象之间的关系（比如有什么共同点，比如顺序如何），以及操作（比如排序，插入等）</code>。</p>
-</li>
-<li><p>程序设计的实质是对确定的问题选择一种好的结构、加上设计一种好的算法。<strong>即程序设计=数据结构+算法。</strong></p>
-</li>
-</ul>
-<hr>
-<h3 id="2、基本概念和术语"><a href="#2、基本概念和术语" class="headerlink" title="2、基本概念和术语"></a>2、基本概念和术语</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据结构基本概念</span></span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">数据 – 程序的操作对象，用于描述客观事物</span></span><br><span class="line"><span class="comment">数据的特点：</span></span><br><span class="line"><span class="comment">可以输入到计算机</span></span><br><span class="line"><span class="comment">可以被计算机程序处理</span></span><br><span class="line"><span class="comment">数据是一个抽象的概念，将其进行分类后得到程序设计语言中的类型。如：int，float，char等等</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">数据项：一个数据元素由若干数据项组成</span></span><br><span class="line"><span class="comment">数据元素：组成数据对象的基本单位</span></span><br><span class="line"><span class="comment">数据对象：性质相同的数据元素的集合（类似于数组一般）</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">数据元素之间不是独立的，存在特定的关系，这些关系即结构</span></span><br><span class="line"><span class="comment">数据结构指数据对象中数据元素之间的关系</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//声明一个结构体类型</span></span><br><span class="line">struct Teacher   <span class="comment">//一种数据类型</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">char</span>    name[<span class="number">32</span>];<span class="comment">//数据项</span></span><br><span class="line">    <span class="keyword">char</span>    tile[<span class="number">32</span>];<span class="comment">//数据项</span></span><br><span class="line">    <span class="keyword">int</span>        age;<span class="comment">//数据项</span></span><br><span class="line">    <span class="keyword">char</span>    addr[<span class="number">128</span>];<span class="comment">//数据项</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    struct Teacher t1; <span class="comment">//数据元素</span></span><br><span class="line">    struct Teacher tArray[<span class="number">30</span>]; <span class="comment">//数据对象</span></span><br><span class="line">    memset(&amp;t1, <span class="number">0</span>, sizeof(t1));</span><br><span class="line"></span><br><span class="line">    strcpy(t1.name, <span class="string">"name"</span>); <span class="comment">//数据项</span></span><br><span class="line">    strcpy(t1.addr, <span class="string">"addr"</span>); <span class="comment">//数据项</span></span><br><span class="line">    strcpy(t1.tile, <span class="string">"addr"</span>); <span class="comment">//数据项</span></span><br><span class="line">    t1.age = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="./images/1521700597047.jpg" alt="数据结构基本概念"></p>
-<hr>
-<h3 id="3、逻辑结构与物理结构"><a href="#3、逻辑结构与物理结构" class="headerlink" title="3、逻辑结构与物理结构"></a>3、逻辑结构与物理结构</h3><p>数据结构分为逻辑结构与物理结构</p>
-<h4 id="3-1、逻辑结构"><a href="#3-1、逻辑结构" class="headerlink" title="3-1、逻辑结构"></a>3-1、逻辑结构</h4><p><strong>是指数据对象中数据元素之间的关系。</strong><br>分为四种。</p>
-<pre><code>- 集合结构
-</code></pre><p><img src="./images/1521871571036.jpg" alt="集合"></p>
-<pre><code>- 线性结构
-</code></pre><p><img src="./images/1521871606947.jpg" alt="线性结构"></p>
-<pre><code>- 树
-</code></pre><p><img src="./images/1521871623031.jpg" alt="树形结构"></p>
-<pre><code>- 图
-</code></pre><p><img src="./images/1521871650962.jpg" alt="图形结构"></p>
-<h4 id="3-2、物理结构（存储结构）"><a href="#3-2、物理结构（存储结构）" class="headerlink" title="3-2、物理结构（存储结构）"></a>3-2、物理结构（存储结构）</h4><p>数据的逻辑结构在计算机中的存储形式。实际上是指如何把数据元素存储到计算机存储器中的</p>
-<p><strong>数据元素的存储结构形式有两种</strong>：<br>    顺序存储结构：如数组<br>    链式存储结构：如链表，是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以不是连续的。</p>
-<p>注：逻辑结构是面向问题的、物理结构是面向计算机的，基本的目标就是将数据及其逻辑关系存储到计算机的内存中。</p>
-<h3 id="4、抽象数据类型"><a href="#4、抽象数据类型" class="headerlink" title="4、抽象数据类型"></a>4、抽象数据类型</h3><h4 id="4-1、数据类型"><a href="#4-1、数据类型" class="headerlink" title="4-1、数据类型"></a>4-1、数据类型</h4><p>计算机需要对数据进行分类，就分出来很多数据的类型。比如 int，float 等。</p>
-<h4 id="4-2、抽象数据类型"><a href="#4-2、抽象数据类型" class="headerlink" title="4-2、抽象数据类型"></a>4-2、抽象数据类型</h4><ul>
-<li>1、为什么需要抽象数据类型？<br>无论什么计算机、什么语言都会面临类似的整数运算，我们可以考虑将其抽象出来。抽象是抽取出事物具有的普遍性本质，是对事物的一个概括，是一种思考问题的方式。</li>
-<li>2、定义<br>抽象数据类型（ADT）是指一个数学模型及定义在该模型上的一组操作。它仅取决于其逻辑特征，而与计算机内部如何表示和实现无关。比如刚才说得整型，各个计算机，不管大型机、小型机、PC、平板电脑甚至智能手机，都有“整型”类型，也需要整形运算，那么整型其实就是一个抽象数据类型。</li>
-</ul>
-<p>Java 中 接本数据类型、引用类型</p>
-<hr>
-
+      <div class="post-body">
+        
+        
+          
+        
+      </div>
+      
+      
       
     </div>
-
     
 
+
+
     
     
     
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<div>
-      
-        
-      
-</div>
-	
-	<div>
-	  
-		<div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-	  
-	</div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/02/14/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
   </div>
 
 
@@ -640,17 +490,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -767,23 +608,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、数据结构起源"><span class="nav-number">1.</span> <span class="nav-text">1、数据结构起源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、基本概念和术语"><span class="nav-number">2.</span> <span class="nav-text">2、基本概念和术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、逻辑结构与物理结构"><span class="nav-number">3.</span> <span class="nav-text">3、逻辑结构与物理结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1、逻辑结构"><span class="nav-number">3.1.</span> <span class="nav-text">3-1、逻辑结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2、物理结构（存储结构）"><span class="nav-number">3.2.</span> <span class="nav-text">3-2、物理结构（存储结构）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、抽象数据类型"><span class="nav-number">4.</span> <span class="nav-text">4、抽象数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1、数据类型"><span class="nav-number">4.1.</span> <span class="nav-text">4-1、数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2、抽象数据类型"><span class="nav-number">4.2.</span> <span class="nav-text">4-2、抽象数据类型</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -855,6 +679,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -1293,6 +1119,74 @@
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log(`LeanCloud Counter Error: ${responseJSON.code} ${responseJSON.error}`);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'Gj7jigLH3i0BVIoM8r2Kni4s-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'Gj7jigLH3i0BVIoM8r2Kni4s-gzGzoHsz',
+                'X-LC-Key': 'B6g16KgId51NWVhW3TElBj1O',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
