@@ -128,20 +128,25 @@
 
           {# Blogroll #}
           {% if theme.links %}
-            <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
-                {{ theme.links_title }}
-              </div>
-              <ul class="links-of-blogroll-list">
-                {% for blogrollText, blogrollURL in theme.links %}
-                  <li class="links-of-blogroll-item">
-                    {{ next_url(blogrollURL, blogrollText, {title: blogrollURL}) }}
-                  </li>
-                {% endfor %}
-              </ul>
+          <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
+              {{ theme.links_title }}&nbsp;
+              <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
             </div>
-          {% endif %}
+            <ul class="links-of-blogroll-list">
+              {% for name, link in theme.links %}
+                <li class="links-of-blogroll-item">
+                  <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+        {% include '../_custom/sidebar.swig' %}
+          </div>
+         {% endif %}
+
+
+		  
 
           {% if theme.custom_file_path.sidebar %}
             {% set custom_sidebar = '../../../../' + theme.custom_file_path.sidebar %}
@@ -183,6 +188,8 @@
           {% endif %}
         </div>
       {% endif %}
+	  
+	  
 
     </div>
   </aside>
