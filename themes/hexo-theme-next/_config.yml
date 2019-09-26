@@ -1094,3 +1094,6 @@ post_wordcount:
   item_text: true
   wordcount: true
   min2read: true
+
+daovoice: true
+daovoice_app_id: 0239fb5b
