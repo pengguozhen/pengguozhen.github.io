@@ -5,9 +5,9 @@
   <subtitle>你好</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2019-09-25T07:10:44.552Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://pengguozhen.github.io/"/>
+  <updated>2019-09-29T09:12:26.192Z</updated>
+  <id>http://pengguozhen.github.io/</id>
   
   <author>
     <name>Ta 的笑很甜</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>第02章-基础设施即服务-Docker</title>
-    <link href="http://yoursite.com/2019/09/25/%E7%AC%AC02%E7%AB%A0-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E6%9C%8D%E5%8A%A1-Docker/"/>
-    <id>http://yoursite.com/2019/09/25/第02章-基础设施即服务-Docker/</id>
-    <published>2019-09-25T07:10:44.551Z</published>
-    <updated>2019-09-25T07:10:44.552Z</updated>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC02%E7%AB%A0-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E6%9C%8D%E5%8A%A1-Docker.html"/>
+    <id>http://pengguozhen.github.io/第02章-基础设施即服务-Docker.html</id>
+    <published>2019-09-29T09:12:26.192Z</published>
+    <updated>2019-09-29T09:12:26.192Z</updated>
     
-    <content type="html"><![CDATA[<p>[toc]</p><h5 id="一、Docker"><a href="#一、Docker" class="headerlink" title="一、Docker"></a>一、Docker</h5><h6 id="1-1、什么是-Docker-？"><a href="#1-1、什么是-Docker-？" class="headerlink" title="1.1、什么是 Docker ？"></a>1.1、什么是 Docker ？</h6><blockquote><p>1、Docker 是一个开源的应用容器引擎；是一个轻量级容器技术；<br>2、Docker 支持将软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像；<br>3、运行中的这个镜像称为容器，容器启动是非常快速的。</p></blockquote><blockquote><p>4、 Docker 与 vmvare 虚拟机都使用了虚拟技术。<br>不同之处如下：</p></blockquote><p><img src="https://i.loli.net/2019/08/29/I5dSWcx1aH82rZf.png" alt="虚拟机"></p><p><img src="https://i.loli.net/2019/08/29/9ptDQ42uyPdUjTv.png" alt="Docker"></p><blockquote><p>Docker 上运行的应用在系统内存不够时，可以直接使用宿主系统的硬件资源。<br>Liunx 虚拟机上的应用程序运行内存只能使用虚拟机操作系统的。不能使用宿主的。</p></blockquote><h6 id="1-2、为什么使用-Docker-？"><a href="#1-2、为什么使用-Docker-？" class="headerlink" title="1.2、为什么使用 Docker ？"></a>1.2、为什么使用 Docker ？</h6><blockquote><p>1、更高效的利用系统资源<br>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟机技术，一个相同配置的主机，往往可以运行更多数量的应用。</p></blockquote><blockquote><p>2、更快速的启动时间<br>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</p></blockquote><blockquote><p>3、一致的运行环境<br>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性。</p></blockquote><blockquote><p>4、持续交付和部署<br>对开发和运维（DevOps）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合 持续部署(Continuous Delivery/Deployment) 系统进行自动部署。<br>而且使用 Dockerfile 使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。</p></blockquote><blockquote><p>5、更轻松的迁移<br>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</p></blockquote><blockquote><p>6、更轻松的维护和扩展<br>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</p></blockquote><blockquote><p>7、对比传统虚拟机总结</p></blockquote><table><thead><tr><th>特性</th><th>容器</th><th>虚拟机</th></tr></thead><tbody><tr><td>启动：</td><td>秒级</td><td>分钟级</td></tr><tr><td>硬盘使用：</td><td>一般为 MB</td><td>一般为 GB</td></tr><tr><td>性能 ：</td><td>接近原生</td><td>弱于</td></tr><tr><td>系统支持量：</td><td>单机支持上千个容器</td><td>一般几十个</td></tr></tbody></table><h6 id="1-3、Docker-引擎"><a href="#1-3、Docker-引擎" class="headerlink" title="1.3、Docker 引擎"></a>1.3、Docker 引擎</h6><p>Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。</p><ul><li>一种服务器，它是一种称为守护进程并且长时间运行的程序。</li><li>REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。</li><li>一个有命令行界面 (CLI) 工具的客户端。</li></ul><p>Docker 引擎组件的流程如下图所示：<br><img src="https://i.loli.net/2019/08/29/sjuOlQeNE4zhYmk.png" alt="Docker引擎"><br>shell 命令调用 server docker 守护进程。</p><h6 id="1-4、Docker-系统架构"><a href="#1-4、Docker-系统架构" class="headerlink" title="1.4、Docker 系统架构"></a>1.4、Docker 系统架构</h6><blockquote><p>Docker 使用客户端-服务器 (C/S) 架构模式，使用远程 API 来管理和创建 Docker 容器。<br>Docker 容器通过 Docker 镜像来创建。<br>容器与镜像的关系类似于面向对象编程中的对象与类。</p></blockquote><table><thead><tr><th>Docker</th><th>面向对象</th></tr></thead><tbody><tr><td>容器</td><td>对象</td></tr><tr><td>镜像</td><td>类</td></tr></tbody></table><p><img src="https://i.loli.net/2019/08/29/zf5lkg8btwSnFCV.png" alt="系统架构图"></p><table><thead><tr><th>标题</th><th>说明</th></tr></thead><tbody><tr><td>镜像(Images)</td><td>Docker 镜像是用于创建 Docker 容器的模板。</td></tr><tr><td>容器(Container)</td><td>容器是独立运行的一个或一组应用。</td></tr><tr><td>客户端(Client)</td><td>Docker 客户端通过命令行或者其他工具使用 Docker API (<a href="https://docs\.docker\.com/reference/api/docker\_remote\_api" target="_blank" rel="noopener">https://docs\.docker\.com/reference/api/docker\_remote\_api</a> ) 与 Docker 的守护进程通信。</td></tr><tr><td>主机(Host)</td><td>一个物理或者虚拟的机器用于执行 Docker 守护进程和容器。</td></tr><tr><td>仓库(Registry)</td><td>Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。Docker Hub(<a href="https://hub\.docker\.com" target="_blank" rel="noopener">https://hub\.docker\.com</a> ) 提供了庞大的镜像集合供使用。</td></tr><tr><td>Docker Machine</td><td>Docker Machine是一个简化Docker安装的命令行工具，通过一个简单的命令行即可在相应的平台上安装Docker，比如VirtualBox、 Digital Ocean、Microsoft Azure。</td></tr></tbody></table><h6 id="1-5、Docker-镜像"><a href="#1-5、Docker-镜像" class="headerlink" title="1.5、Docker 镜像"></a>1.5、Docker 镜像</h6><blockquote><p>镜像：可理解成面向对象中的 java 类。是一个个对象实例的 模板。<br>容器：容器是独立运行的一个或一组应用。可理解成实例对象。实例对象的属性是一个个应用程序。</p></blockquote><h6 id="1-6、Docker-容器"><a href="#1-6、Docker-容器" class="headerlink" title="1.6、Docker 容器"></a>1.6、Docker 容器</h6><blockquote><p>镜像：可理解成面向对象中的 java 类。是一个个对象实例的 模板。<br>容器：容器是独立运行的一个或一组应用。可理解成实例对象。实例对象的属性是一个个应用程序。</p></blockquote><h6 id="1-7、Docker-仓库"><a href="#1-7、Docker-仓库" class="headerlink" title="1.7、Docker 仓库"></a>1.7、Docker 仓库</h6><blockquote><p>仓库：Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。<br>分类：私有仓库、公有仓库。</p></blockquote><h6 id="1-8、安装-Docker"><a href="#1-8、安装-Docker" class="headerlink" title="1.8、安装 Docker"></a>1.8、安装 Docker</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、检查内核版本，必须是3.10及以上</span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line">2、安装docker</span><br><span class="line">yum install docker</span><br><span class="line"></span><br><span class="line">3、输入y确认安装</span><br><span class="line">4、启动docker</span><br><span class="line">[root@localhost ~]# systemctl start docker</span><br><span class="line">[root@localhost ~]# docker -v</span><br><span class="line">Docker version 1.12.6, build 3e8e77d/1.12.6</span><br><span class="line"></span><br><span class="line">5、开机启动docker</span><br><span class="line">[root@localhost ~]# systemctl enable docker</span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.</span><br><span class="line"></span><br><span class="line">6、停止docker</span><br><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure><h6 id="1-9、Docker-镜像加速器"><a href="#1-9、Docker-镜像加速器" class="headerlink" title="1.9、Docker 镜像加速器"></a>1.9、Docker 镜像加速器</h6><p>/etc/docker/daemon.json 中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [</span><br><span class="line">    <span class="string">"https://registry.docker-cn.com"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h5 id="二、Docker-镜像（镜像操作命令）"><a href="#二、Docker-镜像（镜像操作命令）" class="headerlink" title="二、Docker 镜像（镜像操作命令）"></a>二、Docker 镜像（镜像操作命令）</h5><h6 id="2-1、从仓库获取镜像"><a href="#2-1、从仓库获取镜像" class="headerlink" title="2-1、从仓库获取镜像"></a>2-1、从仓库获取镜像</h6><h6 id="2-2、管理本地主机上的镜像"><a href="#2-2、管理本地主机上的镜像" class="headerlink" title="2-2、管理本地主机上的镜像"></a>2-2、管理本地主机上的镜像</h6><h6 id="2-3、介绍镜像实现的基本原理"><a href="#2-3、介绍镜像实现的基本原理" class="headerlink" title="2-3、介绍镜像实现的基本原理"></a>2-3、介绍镜像实现的基本原理</h6><table><thead><tr><th>操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>检索</td><td>docker  search 关键字  eg：docker  search redis</td><td>我们经常去docker  hub上检索镜像的详细信息，如镜像的TAG。</td></tr><tr><td>拉取</td><td>docker pull 镜像名:tag</td><td>:tag是可选的，tag表示标签，多为软件的版本，默认是latest</td></tr><tr><td>列表</td><td>docker images</td><td>查看所有本地镜像</td></tr><tr><td>删除</td><td>docker rmi image-id</td><td>删除指定的本地镜像</td></tr></tbody></table><p><a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></p><hr><h5 id="三、Docker-容器-容器操作命令"><a href="#三、Docker-容器-容器操作命令" class="headerlink" title="三、Docker 容器(容器操作命令)"></a>三、Docker 容器(容器操作命令)</h5><p>软件镜像（QQ安装程序）—-运行镜像—-产生一个容器（正在运行的软件，运行的QQ）；</p><p>步骤：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">1、搜索镜像</span><br><span class="line">[root@localhost ~]# docker search tomcat</span><br><span class="line"></span><br><span class="line">2、拉取镜像</span><br><span class="line">[root@localhost ~]# docker pull tomcat</span><br><span class="line"></span><br><span class="line">3、根据镜像启动容器</span><br><span class="line">docker run --name mytomcat -d tomcat:latest</span><br><span class="line"></span><br><span class="line">4、docker ps  </span><br><span class="line">查看运行中的容器</span><br><span class="line"></span><br><span class="line">5、 停止运行中的容器</span><br><span class="line">docker stop  容器的id</span><br><span class="line"></span><br><span class="line">6、查看所有的容器</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line">7、启动容器</span><br><span class="line">docker start 容器id</span><br><span class="line"></span><br><span class="line">8、删除一个容器</span><br><span class="line"> docker rm 容器id</span><br><span class="line"> </span><br><span class="line">9、启动一个做了端口映射的tomcat</span><br><span class="line">[root@localhost ~]# docker run -d -p 8888:8080 tomcat</span><br><span class="line">-d：后台运行</span><br><span class="line">-p: 将主机的端口映射到容器的一个端口    主机端口:容器内部的端口</span><br><span class="line"></span><br><span class="line">10、为了演示简单关闭了linux的防火墙</span><br><span class="line">service firewalld status ；查看防火墙状态</span><br><span class="line">service firewalld stop：关闭防火墙</span><br><span class="line"></span><br><span class="line">11、查看容器的日志</span><br><span class="line">docker logs container-name/container-id</span><br><span class="line"></span><br><span class="line">更多命令参看</span><br><span class="line">https://docs.docker.com/engine/reference/commandline/docker/</span><br><span class="line">可以参考每一个镜像的文档</span><br></pre></td></tr></table></figure><hr><h5 id="四、Docker-仓库"><a href="#四、Docker-仓库" class="headerlink" title="四、Docker 仓库"></a>四、Docker 仓库</h5><hr><h5 id="五、Docker-实战"><a href="#五、Docker-实战" class="headerlink" title="五、Docker 实战"></a>五、Docker 实战</h5><h6 id="5-1、Docker-安装-MySQL"><a href="#5-1、Docker-安装-MySQL" class="headerlink" title="5-1、Docker 安装 MySQL"></a>5-1、Docker 安装 MySQL</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1、拉取 MySQL 镜像</span><br><span class="line">docker pull mysql</span><br><span class="line"></span><br><span class="line">2、创建 MySQL 容器并运行：</span><br><span class="line">docker run -p 3306:3306 --name mymysql </span><br><span class="line">-v $PWD/conf:/etc/mysql/conf.d </span><br><span class="line">-v $PWD/logs:/logs </span><br><span class="line">-v $PWD/data:/var/lib/mysql </span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root </span><br><span class="line">-d mysql</span><br><span class="line"></span><br><span class="line">run:创建容器并运行</span><br><span class="line">-p：映射指定端口</span><br><span class="line">--name：运行容器名称</span><br><span class="line">-v：目录挂载，将</span><br><span class="line"></span><br><span class="line">3、进入 MySQL 容器，连接 MySQL。：</span><br><span class="line">docker exec -it mysql bash</span><br><span class="line">mysql -uroot -proot</span><br><span class="line"></span><br><span class="line">4、查看用户信息：</span><br><span class="line"> select host,user,plugin,authentication_string from mysql.user;</span><br><span class="line"></span><br><span class="line"> 备注：</span><br><span class="line"> host为 % 表示不限制ip   </span><br><span class="line"> localhost 表示本机使用    </span><br><span class="line"> plugin 非 mysql_native_password 则需要修改密码</span><br><span class="line"></span><br><span class="line">5、修改用户 Hosts ip 访问限制以及密码</span><br><span class="line"> ALTER user 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';</span><br></pre></td></tr></table></figure><hr>]]></content>
+    <content type="html"><![CDATA[<p>[toc]</p><h5 id="一、Docker"><a href="#一、Docker" class="headerlink" title="一、Docker"></a>一、Docker</h5><h6 id="1-1、什么是-Docker-？"><a href="#1-1、什么是-Docker-？" class="headerlink" title="1.1、什么是 Docker ？"></a>1.1、什么是 Docker ？</h6><blockquote><p>1、Docker 是一个开源的应用容器引擎；是一个轻量级容器技术；<br>2、Docker 支持将软件编译成一个镜像；然后在镜像中各种软件做好配置，将镜像发布出去，其他使用者可以直接使用这个镜像；<br>3、运行中的这个镜像称为容器，容器启动是非常快速的。</p></blockquote><blockquote><p>4、 Docker 与 vmvare 虚拟机都使用了虚拟技术。<br>不同之处如下：</p></blockquote><p><img src="https://i.loli.net/2019/08/29/I5dSWcx1aH82rZf.png" alt="虚拟机"></p><p><img src="https://i.loli.net/2019/08/29/9ptDQ42uyPdUjTv.png" alt="Docker"></p><blockquote><p>Docker 上运行的应用在系统内存不够时，可以直接使用宿主系统的硬件资源。<br>Liunx 虚拟机上的应用程序运行内存只能使用虚拟机操作系统的。不能使用宿主的。</p></blockquote><h6 id="1-2、为什么使用-Docker-？"><a href="#1-2、为什么使用-Docker-？" class="headerlink" title="1.2、为什么使用 Docker ？"></a>1.2、为什么使用 Docker ？</h6><blockquote><p>1、更高效的利用系统资源<br>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。无论是应用执行速度、内存损耗或者文件存储速度，都要比传统虚拟机技术更高效。因此，相比虚拟机技术，一个相同配置的主机，往往可以运行更多数量的应用。</p></blockquote><blockquote><p>2、更快速的启动时间<br>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</p></blockquote><blockquote><p>3、一致的运行环境<br>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性。</p></blockquote><blockquote><p>4、持续交付和部署<br>对开发和运维（DevOps）人员来说，最希望的就是一次创建或配置，可以在任意地方正常运行。<br>使用 Docker 可以通过定制应用镜像来实现持续集成、持续交付、部署。开发人员可以通过 Dockerfile 来进行镜像构建，并结合 持续集成(Continuous Integration) 系统进行集成测试，而运维人员则可以直接在生产环境中快速部署该镜像，甚至结合 持续部署(Continuous Delivery/Deployment) 系统进行自动部署。<br>而且使用 Dockerfile 使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。</p></blockquote><blockquote><p>5、更轻松的迁移<br>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</p></blockquote><blockquote><p>6、更轻松的维护和扩展<br>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</p></blockquote><blockquote><p>7、对比传统虚拟机总结</p></blockquote><table><thead><tr><th>特性</th><th>容器</th><th>虚拟机</th></tr></thead><tbody><tr><td>启动：</td><td>秒级</td><td>分钟级</td></tr><tr><td>硬盘使用：</td><td>一般为 MB</td><td>一般为 GB</td></tr><tr><td>性能 ：</td><td>接近原生</td><td>弱于</td></tr><tr><td>系统支持量：</td><td>单机支持上千个容器</td><td>一般几十个</td></tr></tbody></table><h6 id="1-3、Docker-引擎"><a href="#1-3、Docker-引擎" class="headerlink" title="1.3、Docker 引擎"></a>1.3、Docker 引擎</h6><p>Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。</p><ul><li>一种服务器，它是一种称为守护进程并且长时间运行的程序。</li><li>REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。</li><li>一个有命令行界面 (CLI) 工具的客户端。</li></ul><p>Docker 引擎组件的流程如下图所示：<br><img src="https://i.loli.net/2019/08/29/sjuOlQeNE4zhYmk.png" alt="Docker引擎"><br>shell 命令调用 server docker 守护进程。</p><h6 id="1-4、Docker-系统架构"><a href="#1-4、Docker-系统架构" class="headerlink" title="1.4、Docker 系统架构"></a>1.4、Docker 系统架构</h6><blockquote><p>Docker 使用客户端-服务器 (C/S) 架构模式，使用远程 API 来管理和创建 Docker 容器。<br>Docker 容器通过 Docker 镜像来创建。<br>容器与镜像的关系类似于面向对象编程中的对象与类。</p></blockquote><table><thead><tr><th>Docker</th><th>面向对象</th></tr></thead><tbody><tr><td>容器</td><td>对象</td></tr><tr><td>镜像</td><td>类</td></tr></tbody></table><p><img src="https://i.loli.net/2019/08/29/zf5lkg8btwSnFCV.png" alt="系统架构图"></p><table><thead><tr><th>标题</th><th>说明</th></tr></thead><tbody><tr><td>镜像(Images)</td><td>Docker 镜像是用于创建 Docker 容器的模板。</td></tr><tr><td>容器(Container)</td><td>容器是独立运行的一个或一组应用。</td></tr><tr><td>客户端(Client)</td><td>Docker 客户端通过命令行或者其他工具使用 Docker API (<a href="https://docs\.docker\.com/reference/api/docker\_remote\_api" target="_blank" rel="noopener">https://docs\.docker\.com/reference/api/docker\_remote\_api</a> ) 与 Docker 的守护进程通信。</td></tr><tr><td>主机(Host)</td><td>一个物理或者虚拟的机器用于执行 Docker 守护进程和容器。</td></tr><tr><td>仓库(Registry)</td><td>Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。Docker Hub(<a href="https://hub\.docker\.com" target="_blank" rel="noopener">https://hub\.docker\.com</a> ) 提供了庞大的镜像集合供使用。</td></tr><tr><td>Docker Machine</td><td>Docker Machine是一个简化Docker安装的命令行工具，通过一个简单的命令行即可在相应的平台上安装Docker，比如VirtualBox、 Digital Ocean、Microsoft Azure。</td></tr></tbody></table><h6 id="1-5、Docker-镜像"><a href="#1-5、Docker-镜像" class="headerlink" title="1.5、Docker 镜像"></a>1.5、Docker 镜像</h6><blockquote><p>镜像：可理解成面向对象中的 java 类。是一个个对象实例的 模板。<br>容器：容器是独立运行的一个或一组应用。可理解成实例对象。实例对象的属性是一个个应用程序。</p></blockquote><h6 id="1-6、Docker-容器"><a href="#1-6、Docker-容器" class="headerlink" title="1.6、Docker 容器"></a>1.6、Docker 容器</h6><blockquote><p>镜像：可理解成面向对象中的 java 类。是一个个对象实例的 模板。<br>容器：容器是独立运行的一个或一组应用。可理解成实例对象。实例对象的属性是一个个应用程序。</p></blockquote><h6 id="1-7、Docker-仓库"><a href="#1-7、Docker-仓库" class="headerlink" title="1.7、Docker 仓库"></a>1.7、Docker 仓库</h6><blockquote><p>仓库：Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。<br>分类：私有仓库、公有仓库。</p></blockquote><h6 id="1-8、安装-Docker"><a href="#1-8、安装-Docker" class="headerlink" title="1.8、安装 Docker"></a>1.8、安装 Docker</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、检查内核版本，必须是3.10及以上</span><br><span class="line">uname -r</span><br><span class="line"></span><br><span class="line">2、安装docker</span><br><span class="line">yum install docker</span><br><span class="line"></span><br><span class="line">3、输入y确认安装</span><br><span class="line">4、启动docker</span><br><span class="line">[root@localhost ~]# systemctl start docker</span><br><span class="line">[root@localhost ~]# docker -v</span><br><span class="line">Docker version 1.12.6, build 3e8e77d/1.12.6</span><br><span class="line"></span><br><span class="line">5、开机启动docker</span><br><span class="line">[root@localhost ~]# systemctl enable docker</span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.</span><br><span class="line"></span><br><span class="line">6、停止docker</span><br><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure><h6 id="1-9、Docker-镜像加速器"><a href="#1-9、Docker-镜像加速器" class="headerlink" title="1.9、Docker 镜像加速器"></a>1.9、Docker 镜像加速器</h6><blockquote><p>一、问题：docker pull 下载卡在某一步原因<br>需要配置 docker 镜像加速器<br>1、注册阿里云账号，获取镜像加速地址<br><a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a><br>2、在 /etc/docker/deamon.json 中配置该地址，重启docker：systemctl restart docker</p></blockquote><p>/etc/docker/daemon.json 中添加</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [<span class="string">"https://4gnor4sh.mirror.aliyuncs.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h5 id="二、Docker-镜像（镜像操作命令）"><a href="#二、Docker-镜像（镜像操作命令）" class="headerlink" title="二、Docker 镜像（镜像操作命令）"></a>二、Docker 镜像（镜像操作命令）</h5><h6 id="2-1、从仓库获取镜像"><a href="#2-1、从仓库获取镜像" class="headerlink" title="2-1、从仓库获取镜像"></a>2-1、从仓库获取镜像</h6><blockquote><p>1、搜索镜像<br>docker search 镜像名称<br>2、拉去镜像<br>docker pull 镜像名称:版本号 //不写版本号默认 latest 最新的</p></blockquote><h6 id="2-2、管理本地主机上的镜像"><a href="#2-2、管理本地主机上的镜像" class="headerlink" title="2-2、管理本地主机上的镜像"></a>2-2、管理本地主机上的镜像</h6><blockquote><p>1、查看本机上的所有镜像<br>docker images ls<br>2、删除镜像<br>docker images rm 镜像名称/镜像id<br>进阶：比如，我们需要删除所有仓库名为 redis 的镜像：<br>$ docker image rm $(docker image ls -q redis)</p></blockquote><h6 id="2-3、介绍镜像实现的基本原理"><a href="#2-3、介绍镜像实现的基本原理" class="headerlink" title="2-3、介绍镜像实现的基本原理"></a>2-3、介绍镜像实现的基本原理</h6><table><thead><tr><th>操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>检索</td><td>docker  search 关键字  eg：docker  search redis</td><td>我们经常去docker  hub上检索镜像的详细信息，如镜像的TAG。</td></tr><tr><td>拉取</td><td>docker pull 镜像名:tag</td><td>:tag是可选的，tag表示标签，多为软件的版本，默认是latest</td></tr><tr><td>列表</td><td>docker images</td><td>查看所有本地镜像</td></tr><tr><td>删除</td><td>docker rmi image-id</td><td>删除指定的本地镜像</td></tr></tbody></table><p><a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></p><h6 id="2-4、使用-Dockefile-定制镜像"><a href="#2-4、使用-Dockefile-定制镜像" class="headerlink" title="2-4、使用 Dockefile 定制镜像"></a>2-4、使用 Dockefile 定制镜像</h6><blockquote><p>1、作用：解决无法重复的问题、镜像构建透明性的问题、体积的问题。</p></blockquote><blockquote><p>2、Dockefile:是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p></blockquote><blockquote><p>3、以 Nginx 为例：<br>mkdir dockerfile<br>mkdir mynginx<br>touch Dockerfile</p><p>#编辑 Dockerfile</p></blockquote><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx</span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> <span class="built_in">echo</span> <span class="string">'&lt;h1&gt;Hello, Docker!&lt;/h1&gt;'</span> &gt; /usr/share/nginx/html/index.html</span></span><br></pre></td></tr></table></figure><blockquote><p>涉及两条指令：From、Run：<br>From：所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。就像我们之前运行了一个 nginx 镜像的容器，再进行修改一样，基础镜像是必须指定的。而 FROM 就是指定基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是第一条指令。<br>Run：RUN &lt;命令&gt;，就像直接在命令行中输入的命令一样。刚才写的 Dockerfile 中的 RUN 指令就是这种格式。<a href="https://www.funtl.com/zh/docker/Docker-%E4%BD%BF%E7%94%A8-Dockerfile-%E5%AE%9A%E5%88%B6%E9%95%9C%E5%83%8F.html#run-%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4" target="_blank" rel="noopener">详情请点我</a></p></blockquote><blockquote><p>4、Dockerfile 镜像构建上下文：<br><a href="https://www.funtl.com/zh/docker/Docker-使用-Dockerfile-定制镜像.html#镜像构建上下文（context）" target="_blank" rel="noopener">详情参考</a></p></blockquote><blockquote><p>5、Dokerfile 指令：</p></blockquote><hr><h5 id="三、Docker-容器-容器操作命令"><a href="#三、Docker-容器-容器操作命令" class="headerlink" title="三、Docker 容器(容器操作命令)"></a>三、Docker 容器(容器操作命令)</h5><p>软件镜像（QQ安装程序）—-运行镜像—-产生一个容器（正在运行的软件，运行的QQ）；</p><p>步骤：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">1、搜索镜像</span><br><span class="line">[root@localhost ~]# docker search tomcat</span><br><span class="line"></span><br><span class="line">2、拉取镜像</span><br><span class="line">[root@localhost ~]# </span><br><span class="line">docker pull tomcat</span><br><span class="line">docker pull mysql</span><br><span class="line"></span><br><span class="line">3、根据镜像启动容器</span><br><span class="line">docker run --name mytomcat -d tomcat:latest</span><br><span class="line">docker run --name mytomcat -p 8080:8080 -d tomcat</span><br><span class="line">docker run --name mysql -p 3306:3306 -d mysql</span><br><span class="line"></span><br><span class="line">4、docker ps  </span><br><span class="line">查看运行中的容器</span><br><span class="line"></span><br><span class="line">5、 停止运行中的容器</span><br><span class="line">docker stop  容器的id</span><br><span class="line"></span><br><span class="line">6、查看所有的容器</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line">7、启动容器</span><br><span class="line">docker start 容器id</span><br><span class="line"></span><br><span class="line">8、删除一个容器</span><br><span class="line"> docker rm 容器id</span><br><span class="line"> </span><br><span class="line">9、启动一个做了端口映射的tomcat</span><br><span class="line">[root@localhost ~]# docker run -d -p 8888:8080 tomcat</span><br><span class="line">-d：后台运行</span><br><span class="line">-p: 将主机的端口映射到容器的一个端口    主机端口:容器内部的端口</span><br><span class="line"></span><br><span class="line">10、为了演示简单关闭了linux的防火墙</span><br><span class="line">service firewalld status ；查看防火墙状态</span><br><span class="line">service firewalld stop：关闭防火墙</span><br><span class="line"></span><br><span class="line">11、查看容器的日志</span><br><span class="line">docker logs container-name/container-id</span><br><span class="line"></span><br><span class="line">更多命令参看</span><br><span class="line">https://docs.docker.com/engine/reference/commandline/docker/</span><br><span class="line">可以参考每一个镜像的文档</span><br></pre></td></tr></table></figure><hr><h5 id="四、Docker-仓库"><a href="#四、Docker-仓库" class="headerlink" title="四、Docker 仓库"></a>四、Docker 仓库</h5><h6 id="4-1、访问-Docker-仓库"><a href="#4-1、访问-Docker-仓库" class="headerlink" title="4-1、访问 Docker 仓库"></a>4-1、访问 Docker 仓库</h6><h6 id="4-2、访问-GitHub"><a href="#4-2、访问-GitHub" class="headerlink" title="4-2、访问 GitHub"></a>4-2、访问 GitHub</h6><h6 id="4-1、访问-Docker-私有仓库"><a href="#4-1、访问-Docker-私有仓库" class="headerlink" title="4-1、访问 Docker 私有仓库"></a>4-1、访问 Docker 私有仓库</h6><hr><h5 id="五、Docker-实战"><a href="#五、Docker-实战" class="headerlink" title="五、Docker 实战"></a>五、Docker 实战</h5><h6 id="5-1、数据卷"><a href="#5-1、数据卷" class="headerlink" title="5-1、数据卷"></a>5-1、数据卷</h6><h6 id="5-2、Docker-构建-Tomcat"><a href="#5-2、Docker-构建-Tomcat" class="headerlink" title="5-2、Docker 构建 Tomcat"></a>5-2、Docker 构建 Tomcat</h6><blockquote><p>1、查找 Docker Hub 上的 Tomcat 镜像<br>docker search tomcat<br>2、拉取镜像<br>docker pull tomcat<br>3、创建并运行容器<br>docker run –name tomcat -p 8080:8080 -v $PWD/test:/usr/local/tomcat/webapps/test -d tomcat<br>命令说明：<br>-p 8080:8080：将容器的8080端口映射到主机的8080端口<br>-v $PWD/test:/usr/local/tomcat/webapps/test：将主机中当前目录下的test挂载到容器的/test<br>4、查看容器运行情况<br>docker ps<br>通过浏览器进行访问</p></blockquote><h6 id="5-3、Docker-构建-MySQL"><a href="#5-3、Docker-构建-MySQL" class="headerlink" title="5-3、Docker 构建 MySQL"></a>5-3、Docker 构建 MySQL</h6><blockquote><p>1、拉取 MySQL 镜像<br>docker pull tomcat<br>2、创建 MySQL 容器并运行：<br>docker run -p 3306:3306 –name mymysql<br>-v $PWD/conf:/etc/mysql/conf.d<br>-v $PWD/logs:/logs<br>-v $PWD/data:/var/lib/mysql<br>-e MYSQL_ROOT_PASSWORD=root<br>-d mysql<br>命令说明：<br>run:创建容器并运行情况<br>-p 8080:8080：将容器的8080端口映射到主机的8080端口<br>-v $PWD/test:/usr/local/tomcat/webapps/test：将主机中当前目录下的test挂载到容器的/test<br>-p：映射指定端口<br>–name：运行容器名称<br>-v：目录挂载，将当前主机目录挂载到docker 容器的目录<br>3、进入 MySQL 容器，连接 MySQL。：<br>docker exec -it mysql bash<br>mysql -uroot -proot<br>4、查看用户信息：<br> select host,user,plugin,authentication_string from mysql.user;<br> 备注：<br> host为 % 表示不限制ip<br> localhost 表示本机使用<br> plugin 非 mysql_native_password 则需要修改密码<br>5、修改用户 Hosts ip 访问限制以及密码<br> ALTER user ‘root‘@’%’ IDENTIFIED WITH mysql_native_password BY ‘root’;</p></blockquote><h6 id="5-4、项目部署到容器上"><a href="#5-4、项目部署到容器上" class="headerlink" title="5-4、项目部署到容器上"></a>5-4、项目部署到容器上</h6><hr>]]></content>
     
     <summary type="html">
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
   <entry>
     <title>第02章-基础设施即服务</title>
-    <link href="http://yoursite.com/2019/09/25/%E7%AC%AC02%E7%AB%A0-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E6%9C%8D%E5%8A%A1/"/>
-    <id>http://yoursite.com/2019/09/25/第02章-基础设施即服务/</id>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC02%E7%AB%A0-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E6%9C%8D%E5%8A%A1.html"/>
+    <id>http://pengguozhen.github.io/第02章-基础设施即服务.html</id>
     <published>2019-09-25T07:10:30.267Z</published>
     <updated>2019-09-25T07:10:30.267Z</updated>
     
@@ -61,17 +61,17 @@
     
     </summary>
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
   <entry>
     <title>第01章-微服务简介</title>
-    <link href="http://yoursite.com/2019/09/25/%E7%AC%AC01%E7%AB%A0-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%AE%80%E4%BB%8B/"/>
-    <id>http://yoursite.com/2019/09/25/第01章-微服务简介/</id>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC01%E7%AB%A0-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%AE%80%E4%BB%8B.html"/>
+    <id>http://pengguozhen.github.io/第01章-微服务简介.html</id>
     <published>2019-09-25T07:10:22.617Z</published>
     <updated>2019-09-25T07:10:22.617Z</updated>
     
@@ -88,17 +88,17 @@
     
     </summary>
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
     
-      <category term="微服务-Itoken实战" scheme="http://yoursite.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
+      <category term="微服务-Itoken实战" scheme="http://pengguozhen.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-Itoken%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
   <entry>
     <title>二、VMware 中 Linux 网络配置及环境初始化</title>
-    <link href="http://yoursite.com/2019/09/25/%E4%BA%8C%E3%80%81VMware%20%E4%B8%AD%20Linux%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
-    <id>http://yoursite.com/2019/09/25/二、VMware 中 Linux 网络配置及环境初始化/</id>
+    <link href="http://pengguozhen.github.io/%E4%BA%8C%E3%80%81VMware%20%E4%B8%AD%20Linux%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96.html"/>
+    <id>http://pengguozhen.github.io/二、VMware 中 Linux 网络配置及环境初始化.html</id>
     <published>2019-09-25T05:57:42.140Z</published>
     <updated>2019-09-25T05:57:42.140Z</updated>
     
@@ -114,17 +114,17 @@
     
     </summary>
     
-      <category term="Linux 学习" scheme="http://yoursite.com/categories/Linux-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Linux 学习" scheme="http://pengguozhen.github.io/categories/Linux-%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Linux 学习" scheme="http://yoursite.com/tags/Linux-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Linux 学习" scheme="http://pengguozhen.github.io/tags/Linux-%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>一、Linux操作手册</title>
-    <link href="http://yoursite.com/2019/09/25/%E4%B8%80%E3%80%81Linux%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"/>
-    <id>http://yoursite.com/2019/09/25/一、Linux操作手册/</id>
+    <link href="http://pengguozhen.github.io/%E4%B8%80%E3%80%81Linux%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C.html"/>
+    <id>http://pengguozhen.github.io/一、Linux操作手册.html</id>
     <published>2019-09-25T01:02:24.265Z</published>
     <updated>2019-09-25T01:02:24.266Z</updated>
     
@@ -141,17 +141,17 @@
     
     </summary>
     
-      <category term="Linux 学习" scheme="http://yoursite.com/categories/Linux-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Linux 学习" scheme="http://pengguozhen.github.io/categories/Linux-%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Linux 学习" scheme="http://yoursite.com/tags/Linux-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="Linux 学习" scheme="http://pengguozhen.github.io/tags/Linux-%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Maven使用手册</title>
-    <link href="http://yoursite.com/2019/05/16/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
-    <id>http://yoursite.com/2019/05/16/Maven使用手册/</id>
+    <link href="http://pengguozhen.github.io/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html"/>
+    <id>http://pengguozhen.github.io/Maven使用手册.html</id>
     <published>2019-05-16T08:01:46.212Z</published>
     <updated>2019-05-16T08:01:46.212Z</updated>
     
@@ -169,17 +169,17 @@
     
     </summary>
     
-      <category term="开发工具相关" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/"/>
+      <category term="开发工具相关" scheme="http://pengguozhen.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="Maven使用手册" scheme="http://yoursite.com/tags/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+      <category term="Maven使用手册" scheme="http://pengguozhen.github.io/tags/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
   <entry>
     <title>一、MySQL 基础</title>
-    <link href="http://yoursite.com/2019/04/28/MySQL%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2019/04/28/MySQL基础/</id>
+    <link href="http://pengguozhen.github.io/MySQL%E5%9F%BA%E7%A1%80.html"/>
+    <id>http://pengguozhen.github.io/MySQL基础.html</id>
     <published>2019-04-28T03:47:29.898Z</published>
     <updated>2019-04-28T03:47:29.899Z</updated>
     
@@ -196,17 +196,17 @@
     
     </summary>
     
-      <category term="MySQL基础" scheme="http://yoursite.com/categories/MySQL%E5%9F%BA%E7%A1%80/"/>
+      <category term="MySQL基础" scheme="http://pengguozhen.github.io/categories/MySQL%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="MySQL基础" scheme="http://yoursite.com/tags/MySQL%E5%9F%BA%E7%A1%80/"/>
+      <category term="MySQL基础" scheme="http://pengguozhen.github.io/tags/MySQL%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>一、SQL 转换：Oracle 转 MySQL</title>
-    <link href="http://yoursite.com/2019/04/25/MySQL%E6%9B%BF%E4%BB%A3Oracle%E5%BA%8F%E5%88%97/"/>
-    <id>http://yoursite.com/2019/04/25/MySQL替代Oracle序列/</id>
+    <link href="http://pengguozhen.github.io/MySQL%E6%9B%BF%E4%BB%A3Oracle%E5%BA%8F%E5%88%97.html"/>
+    <id>http://pengguozhen.github.io/MySQL替代Oracle序列.html</id>
     <published>2019-04-25T03:05:07.000Z</published>
     <updated>2019-04-25T06:09:07.321Z</updated>
     
@@ -226,17 +226,17 @@
     
     </summary>
     
-      <category term="MySQL 学习" scheme="http://yoursite.com/categories/MySQL-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MySQL 学习" scheme="http://pengguozhen.github.io/categories/MySQL-%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="MySQL 学习" scheme="http://yoursite.com/tags/MySQL-%E5%AD%A6%E4%B9%A0/"/>
+      <category term="MySQL 学习" scheme="http://pengguozhen.github.io/tags/MySQL-%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Spring-4--AOP</title>
-    <link href="http://yoursite.com/2019/03/25/Spring-4--AOP/"/>
-    <id>http://yoursite.com/2019/03/25/Spring-4--AOP/</id>
+    <link href="http://pengguozhen.github.io/Spring-4--AOP.html"/>
+    <id>http://pengguozhen.github.io/Spring-4--AOP.html</id>
     <published>2019-03-25T10:24:29.034Z</published>
     <updated>2019-03-25T02:23:34.000Z</updated>
     
@@ -252,17 +252,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/categories/Spring/"/>
     
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>Spring-3--IOC&amp;DI</title>
-    <link href="http://yoursite.com/2019/03/25/Spring-3--IOC&amp;DI/"/>
-    <id>http://yoursite.com/2019/03/25/Spring-3--IOC&amp;DI/</id>
+    <link href="http://pengguozhen.github.io/Spring-3--IOC&amp;DI.html"/>
+    <id>http://pengguozhen.github.io/Spring-3--IOC&amp;DI.html</id>
     <published>2019-03-25T10:24:29.032Z</published>
     <updated>2019-03-25T02:23:34.000Z</updated>
     
@@ -278,17 +278,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/categories/Spring/"/>
     
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>Spring-2--开发环境搭建</title>
-    <link href="http://yoursite.com/2019/03/25/Spring-2--%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2019/03/25/Spring-2--开发环境搭建/</id>
+    <link href="http://pengguozhen.github.io/Spring-2--%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html"/>
+    <id>http://pengguozhen.github.io/Spring-2--开发环境搭建.html</id>
     <published>2019-03-25T07:33:39.279Z</published>
     <updated>2019-03-24T23:30:12.000Z</updated>
     
@@ -304,17 +304,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/categories/Spring/"/>
     
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>Spring-1--什么是Spring？</title>
-    <link href="http://yoursite.com/2019/03/25/Spring-1--%E4%BB%80%E4%B9%88%E6%98%AFSpring%EF%BC%9F/"/>
-    <id>http://yoursite.com/2019/03/25/Spring-1--什么是Spring？/</id>
+    <link href="http://pengguozhen.github.io/Spring-1--%E4%BB%80%E4%B9%88%E6%98%AFSpring%EF%BC%9F.html"/>
+    <id>http://pengguozhen.github.io/Spring-1--什么是Spring？.html</id>
     <published>2019-03-25T07:33:39.277Z</published>
     <updated>2019-03-24T23:30:12.000Z</updated>
     
@@ -331,17 +331,17 @@
     
     </summary>
     
-      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/categories/Spring/"/>
     
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://pengguozhen.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
     <title>Hexo+GitHub page 搭建个人博客</title>
-    <link href="http://yoursite.com/2019/03/25/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+%20github%20page%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F/"/>
-    <id>http://yoursite.com/2019/03/25/如何使用Hexo+ github page搭建博客？/</id>
+    <link href="http://pengguozhen.github.io/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+%20github%20page%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%9F.html"/>
+    <id>http://pengguozhen.github.io/如何使用Hexo+ github page搭建博客？.html</id>
     <published>2019-03-25T04:12:59.560Z</published>
     <updated>2019-03-25T05:43:23.033Z</updated>
     
@@ -360,17 +360,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://pengguozhen.github.io/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://pengguozhen.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>第3章-线性表</title>
-    <link href="http://yoursite.com/2019/03/25/%E7%AC%AC3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
-    <id>http://yoursite.com/2019/03/25/第3章-线性表/</id>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E8%A1%A8.html"/>
+    <id>http://pengguozhen.github.io/第3章-线性表.html</id>
     <published>2019-03-25T02:51:43.036Z</published>
     <updated>2019-03-24T18:50:10.000Z</updated>
     
@@ -387,17 +387,17 @@
     
     </summary>
     
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>第2章-算法</title>
-    <link href="http://yoursite.com/2019/03/25/%E7%AC%AC2%E7%AB%A0-%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/03/25/第2章-算法/</id>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC2%E7%AB%A0-%E7%AE%97%E6%B3%95.html"/>
+    <id>http://pengguozhen.github.io/第2章-算法.html</id>
     <published>2019-03-25T02:51:43.028Z</published>
     <updated>2019-03-24T18:50:10.000Z</updated>
     
@@ -414,17 +414,17 @@
     
     </summary>
     
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>第1章-数据结构绪论</title>
-    <link href="http://yoursite.com/2019/03/25/%E7%AC%AC1%E7%AB%A0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA/"/>
-    <id>http://yoursite.com/2019/03/25/第1章-数据结构绪论/</id>
+    <link href="http://pengguozhen.github.io/%E7%AC%AC1%E7%AB%A0-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%BB%AA%E8%AE%BA.html"/>
+    <id>http://pengguozhen.github.io/第1章-数据结构绪论.html</id>
     <published>2019-03-25T02:51:43.021Z</published>
     <updated>2019-03-24T18:50:10.000Z</updated>
     
@@ -440,17 +440,17 @@
     
     </summary>
     
-      <category term="数据结构" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="http://pengguozhen.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>Hexo</title>
-    <link href="http://yoursite.com/2019/02/14/hello-world/"/>
-    <id>http://yoursite.com/2019/02/14/hello-world/</id>
+    <link href="http://pengguozhen.github.io/hello-world.html"/>
+    <id>http://pengguozhen.github.io/hello-world.html</id>
     <published>2019-02-14T09:09:29.792Z</published>
     <updated>2019-03-25T04:12:46.423Z</updated>
     
@@ -465,10 +465,10 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://pengguozhen.github.io/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://pengguozhen.github.io/tags/Hexo/"/>
     
   </entry>
   
