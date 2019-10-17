@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://pengguozhen.github.io/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%20%5B2%5D.html</loc>
+    <loc>http://pengguozhen.github.io/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html</loc>
     
     <lastmod>2019-10-15T06:26:52.768Z</lastmod>
     
@@ -44,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://pengguozhen.github.io/Maven%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.html</loc>
-    
-    <lastmod>2019-05-16T08:01:46.212Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://pengguozhen.github.io/MySQL%E5%9F%BA%E7%A1%80.html</loc>
     
     <lastmod>2019-04-28T03:47:29.899Z</lastmod>
@@ -79,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://pengguozhen.github.io/Spring-4--AOP.html</loc>
+    <loc>http://pengguozhen.github.io/Spring-3--IOC&DI.html</loc>
     
     <lastmod>2019-03-25T02:23:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://pengguozhen.github.io/Spring-3--IOC&DI.html</loc>
+    <loc>http://pengguozhen.github.io/Spring-4--AOP.html</loc>
     
     <lastmod>2019-03-25T02:23:34.000Z</lastmod>
     
